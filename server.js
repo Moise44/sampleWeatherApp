@@ -5,10 +5,11 @@ const path = require('path');
 const app = express()
 const apiKey = '1f9c49dcd51528d9097e397636dee9ce';
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 var fs = require('fs');
-
 var dir = path.join(__dirname, '');
-
 var mime = {
     html: 'text/html',
     txt: 'text/plain',
@@ -36,15 +37,6 @@ app.get('*', function (req, res) {
         res.status(404).end('Not found');
     });
 });
-
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-app.use(bodyParser.json());
-
 
 app.post('/get_weather_by_city', function (req, res) {
   

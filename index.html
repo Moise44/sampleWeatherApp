@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>My First Weather App</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,12 +34,11 @@
         let description = weatherForcast.weather[0].description;
         let temp = weatherForcast.main.temp;
         
-        document.getElementsByClassName("daytime")[0].innerHTML =  moment(Date.now()).format('dddd LT');
-        document.getElementsByClassName("forecastTemp")[0].innerHTML = temp;
-        document.getElementsByClassName("descrition")[0].innerHTML = description;
-        document.getElementsByClassName("city")[0].innerHTML = document.getElementById("city").value;
-        
-        document.getElementsByClassName("forecast")[0].style.opacity = 1;
+        document.querySelector(".daytime").innerHTML =  moment(Date.now()).format('dddd LT');
+        document.querySelector(".forecastTemp").innerHTML = temp;
+        document.querySelector(".descrition").innerHTML = description;
+        document.querySelector(".city").innerHTML = document.getElementById("city").value;
+        document.querySelector(".forecast").style.opacity = 1;
     }
 
     //TODO: adjust image to weather forcast
@@ -49,8 +48,8 @@
   <body>
     <div class="container">
       <fieldset>
-          <input id="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Weather" onclick="getWeather()">
+          <input id="city" type="text" class="text-input" placeholder="Enter a City" required>
+          <input type="button" class="action-button" value="Get Weather" onclick="getWeather()">
       </fieldset>
     </div>
     <div class="forecast">

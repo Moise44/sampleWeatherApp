@@ -29,7 +29,7 @@ fieldset {
   min-width: -webkit-min-content;
   padding: 30px;
 }
-.ghost-input, p {
+.text-input, p {
   display: block;
   font-weight:300;
   width: 100%;
@@ -51,12 +51,13 @@ fieldset {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-.ghost-input:focus {
+.text-input:focus {
   border-bottom:1px solid #ddd;
 }
-.ghost-button {
+.action-button {
   background-color: transparent;
-  border:2px solid #ddd;
+  border:1px solid #ddd;
+  font-family: Open Sans,Verdana;
   padding:10px 30px;
   width: 100%;
   -webkit-transition: all 0.1s ease-in-out;
@@ -65,8 +66,8 @@ fieldset {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-.ghost-button:hover {
-  border:2px solid #515151;
+.action-button:hover {
+  border:1px solid #515151;
 }
 p {
   color: #E64A19;
